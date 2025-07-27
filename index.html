@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>邢世政 - 个人简历</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#165DFF',
+            secondary: '#0F172A',
+            accent: '#38BDF8',
+            neutral: '#F8FAFC',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .resume-shadow {
+        box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+      }
+      .section-title {
+        @apply text-primary font-bold text-xl mb-3 border-b-2 border-primary/20 pb-1;
+      }
+      .timeline-item {
+        @apply relative pl-6 pb-6;
+      }
+      .timeline-item::before {
+        content: '';
+        @apply absolute left-0 top-1 w-3 h-3 rounded-full bg-primary;
+      }
+      .timeline-item::after {
+        content: '';
+        @apply absolute left-1.5 top-4 w-0.5 h-full bg-primary/20;
+      }
+      .timeline-item:last-child::after {
+        @apply hidden;
+      }
+      .avatar-hover {
+        transition: transform 0.3s ease-in-out;
+      }
+      .avatar-hover:hover {
+        transform: scale(1.05);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex justify-center py-8 px-4">
+  <div class="w-full max-w-4xl resume-shadow bg-white rounded-lg overflow-hidden">
+    <!-- 头部信息 -->
+    <header class="bg-primary text-white p-6 md:p-8">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+          <!-- 修改后的头像位置 -->
+          <div class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-white/20 border-4 border-white/30 flex items-center justify-center overflow-hidden avatar-hover">
+            <img 
+              src="./ff827e8bf09ec511fe32a1d8a3a9519.jpg" 
+              alt="邢世政头像"
+              class="w-full h-full object-cover"
+            >
+          </div>
+          <div>
+            <h1 class="text-[clamp(1.8rem,5vw,2.5rem)] font-bold mb-2">邢世政</h1>
+            <p class="text-white/90 text-lg mb-1">新能源汽修专业 | 中专学历</p>
+            <p class="text-white/80"><i class="fa fa-birthday-cake mr-2"></i>2006年11月21日 | <i class="fa fa-mars mr-2"></i>男</p>
+          </div>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <a href="tel:#" class="flex items-center text-white/90 hover:text-white transition-colors">
+            <i class="fa fa-phone mr-2"></i>
+            <span>联系电话:13363862969</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 以下main和footer部分保持不变 -->
+    <main class="p-6 md:p-8">
+      <!-- 个人概述 -->
+      <section class="mb-8">
+        <h2 class="section-title">个人概述</h2>
+        <p class="text-gray-700 leading-relaxed">
+          本人在中专学习期间表现优异，担任班长职务，具备良好的组织协调能力和团队合作精神。在安波福电气系统有限公司芜湖分公司实习期间，担任小组长，积累了实际工作经验，擅长学习新知识，能够快速适应新环境和新技术，对新能源汽修行业有强烈的兴趣和热情。
+        </p>
+      </section>
+
+      <!-- 学习经历 -->
+      <section class="mb-8">
+        <h2 class="section-title">学习经历</h2>
+        <div class="timeline-item">
+          <div class="flex flex-col md:flex-row justify-between mb-1">
+            <h3 class="font-semibold text-lg">河北省正定职业教育中心</h3>
+            <span class="text-primary">2022年 - 2025年</span>
+          </div>
+          <p class="text-gray-600 mb-1">中专 | 新能源汽修专业</p>
+          <p class="text-gray-600 italic">担任班长职务</p>
+          <ul class="list-disc list-inside mt-2 text-gray-700">
+            <li>主修课程：新能源汽车构造与原理、动力电池管理与维护、驱动电机与控制技术等</li>
+            <li>连续三年获得校级"三好学生"称号</li>
+            <li>2023年获得学校技能大赛新能源汽修组一等奖</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 工作经历 -->
+      <section class="mb-8">
+        <h2 class="section-title">工作经历</h2>
+        <div class="timeline-item">
+          <div class="flex flex-col md:flex-row justify-between mb-1">
+            <h3 class="font-semibold text-lg">安波福电气系统有限公司芜湖分公司</h3>
+            <span class="text-primary">中专在读期间</span>
+          </div>
+          <p class="text-gray-600 mb-2">实习 | 小组长</p>
+          <ul class="list-disc list-inside mt-2 text-gray-700">
+            <li>负责小组的日常工作安排和进度跟踪，确保生产任务按时完成</li>
+            <li>协助团队完成了多项技术改进项目，降低了生产成本</li>
+            <li>获得公司"优秀实习生"称号</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 专业技能 -->
+      <section class="mb-8">
+        <h2 class="section-title">专业技能</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h3 class="font-medium text-gray-800 mb-2">技术能力</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>熟悉新能源汽车的结构和工作原理</li>
+              <li>掌握动力电池的检测与维护技术</li>
+              <li>能够使用专业工具进行故障诊断和修复</li>
+              <li>了解新能源汽车充电系统的安装与调试</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-medium text-gray-800 mb-2">软技能</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>优秀的团队协作能力和沟通能力</li>
+              <li>较强的学习能力和问题解决能力</li>
+              <li>良好的组织协调能力和责任心</li>
+              <li>能够承受工作压力，适应快节奏的工作环境</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 证书与荣誉 -->
+      <section class="mb-8">
+        <h2 class="section-title">证书与荣誉</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <div class="flex items-center mb-2">
+              <i class="fa fa-certificate text-primary mr-2"></i>
+              <h3 class="font-medium">机动车驾驶证</h3>
+            </div>
+            <p class="text-gray-600 text-sm">C1驾驶证，熟练掌握驾驶技能</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <div class="flex items-center mb-2">
+              <i class="fa fa-trophy text-primary mr-2"></i>
+              <h3 class="font-medium">优秀实习生</h3>
+            </div>
+            <p class="text-gray-600 text-sm">安波福电气系统有限公司芜湖分公司</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <div class="flex items-center mb-2">
+              <i class="fa fa-award text-primary mr-2"></i>
+              <h3 class="font-medium">技能大赛一等奖</h3>
+            </div>
+            <p class="text-gray-600 text-sm">学校技能大赛新能源汽修组</p>
+          </div>
+          <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <div class="flex items-center mb-2">
+              <i class="fa fa-star text-primary mr-2"></i>
+              <h3 class="font-medium">三好学生</h3>
+            </div>
+            <p class="text-gray-600 text-sm">连续三年获得校级"三好学生"称号</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 兴趣爱好 -->
+      <section>
+        <h2 class="section-title">兴趣爱好</h2>
+        <div class="flex flex-wrap gap-3 mt-2">
+          <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+            <i class="fa fa-car mr-1"></i> 汽车改装
+          </span>
+          <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+            <i class="fa fa-cogs mr-1"></i> 机械维修
+          </span>
+          <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+            <i class="fa fa-book mr-1"></i> 技术阅读
+          </span>
+          <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+            <i class="fa fa-users mr-1"></i> 团队活动
+          </span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-50 border-t border-gray-200 p-4 text-center text-gray-500 text-sm">
+      <p>更新日期: 2025年7月26日</p>
+    </footer>
+  </div>
+</body>
+</html>
